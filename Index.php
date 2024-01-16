@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce Prodotti Animali</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
+    <div class="container mt-4">
+        <div class="row justify-content-center">
 
             <?php
             require_once 'Category.php';
@@ -29,14 +30,20 @@
             $catToy = new Toy("Giochi per Gatti", 11.99, $categoryCat, "https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/0f55352c9f233a75308668b0081c9294.jpg");
             $dogKennel = new Kennel("Cuccia per Cani", 55.99, $categoryDog, "https://5.imimg.com/data5/SELLER/Default/2023/8/339222687/UG/HL/BL/13910362/dog-kennel.png");
             $catKennel = new Kennel("Cuccia per Gatti", 255.99, $categoryCat, "https://m.media-amazon.com/images/I/91nTJrSrDmL.jpg");
+            $dogCollar = new Toy("Collare per Cani", 15.99, $categoryDog, "https://assets.hermes.cn/is/image/hermesproduct/punch-dog-collar--800597EJ89-worn-1-0-0-800-800_g.jpg");
+            $catCollar = new Toy("Collare per Gatti", 13.99, $categoryCat, "https://www.birdsbesafe.com/cdn/shop/files/Reflective-Full-Stretch-Collar-BIrdsbesafe-2.jpg?v=1685070406&width=1024");
+            $dogShampoo = new Food("Shampoo per Cani", 19.99, $categoryDog, "https://www.4-legger.com/cdn/shop/files/4-legger-food-grade-usda-organic-dog-shampoo-organic-lemongrass-and-aloe-hypoallergenic-dog-shampoo-41062781911271.jpg?v=1693847977&width=1080");
+            $catShampoo = new Food("Shampoo per Gatti", 17.99, $categoryCat, "https://theblissfulcat.com/cdn/shop/products/GT_KITTEN_TUB_4-8-16.jpg?v=1644697148");
+            $dogBowl = new Kennel("Ciotola per Cani", 12.99, $categoryDog, "https://deindog.com/wp-content/uploads/2022/04/Terra-Hundenapf-3.png");
+            $catBowl = new Kennel("Ciotola per Gatti", 10.99, $categoryCat, "https://cdn-cnbpg.nitrocdn.com/ePUhlDYyXEEYZtvBXHTnItSitmyXhPJP/assets/images/optimized/rev-06708e2/danishdesignco.com.sg/wp-content/uploads/2021/03/1-6-1.jpg");
+
+            $products = [
+                $dogFood, $catFood, $dogToy, $catToy, $dogKennel, $catKennel,
+                $dogCollar, $catCollar, $dogShampoo, $catShampoo, $dogBowl, $catBowl
+            ];
 
             // Stampa le card dei prodotti
-            renderProductCard($dogFood);
-            renderProductCard($catFood);
-            renderProductCard($dogToy);
-            renderProductCard($catToy);
-            renderProductCard($dogKennel);
-            renderProductCard($catKennel);
+            renderProductCards($products);
             ?>
 
         </div>

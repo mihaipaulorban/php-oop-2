@@ -1,0 +1,26 @@
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: calc(0.375rem - 1px);
+  border-top-right-radius: calc(0.375rem - 1px);
+}
+
+/* Stile per il body della card */
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  margin-bottom: auto;
+}
+
+.card-text:first-of-type {
+  margin-top: auto;
+}
+
+.price {
+  color: rgb(42, 172, 227);
+  font-weight: bold;
+}
