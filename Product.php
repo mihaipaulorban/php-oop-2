@@ -1,6 +1,8 @@
 <?php
+// Classe per il prodotto generico
 class Product
 {
+    // Atrriburti comuni tra tutti i prodotti
     public $title;
     public $price;
     public $category;

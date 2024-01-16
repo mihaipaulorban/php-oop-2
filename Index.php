@@ -5,21 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce Prodotti Animali</title>
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header>
+        <h1>Pet Shop</h1>
+    </header>
     <div class="container mt-4">
         <div class="row justify-content-center">
 
             <?php
+            // Inclusione file
             require_once 'Category.php';
             require_once 'Food.php';
             require_once 'Toy.php';
             require_once 'Kennel.php';
             require_once 'functions.php';
 
+            // Aggiungo le categorie di cani e gatti
             $categoryDog = new Category("Cani");
             $categoryCat = new Category("Gatti");
 
@@ -37,6 +44,7 @@
             $dogBowl = new Kennel("Ciotola per Cani", 12.99, $categoryDog, "https://deindog.com/wp-content/uploads/2022/04/Terra-Hundenapf-3.png");
             $catBowl = new Kennel("Ciotola per Gatti", 10.99, $categoryCat, "https://cdn-cnbpg.nitrocdn.com/ePUhlDYyXEEYZtvBXHTnItSitmyXhPJP/assets/images/optimized/rev-06708e2/danishdesignco.com.sg/wp-content/uploads/2021/03/1-6-1.jpg");
 
+            // Array dei prodotti per il foreach
             $products = [
                 $dogFood, $catFood, $dogToy, $catToy, $dogKennel, $catKennel,
                 $dogCollar, $catCollar, $dogShampoo, $catShampoo, $dogBowl, $catBowl

@@ -1,4 +1,5 @@
 <?php
+// Genera una card per ogni prodotto
 function renderProductCards($products)
 {
     foreach ($products as $product) {
@@ -8,6 +9,7 @@ function renderProductCards($products)
     }
 }
 
+// Definisce la struttura della card
 function renderProductCard($product)
 {
     echo "<div class='card h-100'>";
