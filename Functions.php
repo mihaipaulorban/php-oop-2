@@ -18,6 +18,7 @@ function renderProductCard($product)
     echo "<h5 class='card-title'>{$product->title}</h5>";
     echo "<p class='card-text mb-auto price'>Prezzo: {$product->price}€</p>";
     echo "<p class='card-text'>Categoria: {$product->category->name}</p>";
+    echo "<button type='button' class='btn btn-outline-success' data-bs-toggle='modal' data-bs-target='#paymentModal'>Compra</button>";
     echo "</div>";
     echo "</div>";
 }

@@ -56,9 +56,37 @@
 
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="paymentModalLabel">Pagamento</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="app">
+                        <input type="date" v-model="expiryDate" class="form-control mb-3">
+                        <button class="btn btn-success" @click="validateCard">Conferma Pagamento</button>
 
+                        <!-- Messaggio di errore -->
+                        <div v-if="showError" class="alert alert-danger mt-3">
+                            {{ errorMessage }}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kqtXAGOV3sYlL05p8QqNm0ncCI6n3O6+Yw2ov5CJ4tJ5FqHb7Ez9FyGfjtD2t7OQ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- VUE -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Script.js -->
+    <script src="script.js"></script>
+
 </body>
+
 
 </html>
